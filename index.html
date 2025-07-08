@@ -1,89 +1,264 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Français Pratique</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        .features, .about {
-            margin: 20px 0;
-            padding: 15px;
-            background: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #777;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Français Pratique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #18A4E0, #4CAF50);
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header img {
+      margin-top: 10px;
+      width: 80px;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      background: #fff;
+      margin: 30px 0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #18A4E0;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: #18A4E0;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #0f7cb4;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: #f0faff;
+      border: 1px solid #dceffd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .feature-card h3 {
+      color: #18A4E0;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .testimonial {
+      background: #fff6ec;
+      border-left: 6px solid #ffc107;
+      padding: 15px 20px;
+      border-radius: 8px;
+    }
+
+    .testimonial p {
+      margin: 0;
+    }
+
+    .screenshots {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .screenshots img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .stat {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .stat h3 {
+      font-size: 2em;
+      color: #18A4E0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .button {
+        padding: 12px 22px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Français Pratique</h1>
-    <img src="logoo.png" alt="Icone de l'application" style="width: 100px; height: auto;">
+  <h1>Français Pratique</h1>
+  <img src="logoo.png" alt="Icône de l'application">
 </header>
 
 <div class="container">
-    <div class="about">
-        <h2>À propos de l'application</h2>
-        <p><strong>Bienvenue dans Français Pratique, votre Compagnon d'Excellence pour une Aventure Linguistique Captivante !</strong></p>
-        <p>Téléchargez maintenant et plongez-vous dans un monde où l'apprentissage du français transcende les frontières de l'ordinaire pour devenir une expérience véritablement enrichissante.</p>
-    </div>
 
-    <div class="features">
-        <h2>Fonctionnalités Principales :</h2>
-        <ul>
-            <li><strong>Exploration Continue :</strong> Ouvrez la porte sur un monde d'apprentissage infini avec des leçons captivantes, des quiz stimulants et des défis passionnants.</li>
-            <li><strong>Connexion Communautaire :</strong> Rejoignez une communauté active de passionnés de la langue française.</li>
-        </ul>
-    </div>
+  <section>
+    <h2>Bienvenue dans l’application</h2>
+    <p><strong>Français Pratique</strong> vous accompagne dans l’apprentissage du français avec une approche simple, interactive et efficace. Que vous soyez débutant ou avancé, découvrez une méthode adaptée à vos besoins.</p>
+  </section>
 
-    <div class="about">
-        <h2>Pourquoi Choisir Français Pratique :</h2>
-        <p><strong>Adaptabilité Personnalisée :</strong> Que vous soyez débutant ou avancé, Français Pratique s'ajuste à vos besoins spécifiques.</p>
+  <section>
+    <h2>Fonctionnalités Clés</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>📚 Cours variés</h3>
+        <p>Des leçons claires et progressives pour renforcer vos bases en grammaire, conjugaison, vocabulaire et plus encore.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🧠 Quiz intelligents</h3>
+        <p>Mettez vos connaissances à l’épreuve avec des quiz adaptés à votre niveau et suivez vos progrès.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌍 Communauté active</h3>
+        <p>Partagez vos progrès, posez des questions et restez motivé(e) en échangeant avec d’autres apprenants.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎓 Certificats</h3>
+        <p>Obtenez un certificat après avoir réussi le test dans l'application pour valoriser vos acquis.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="footer">
-        <p><strong>Commencez Votre Voyage Linguistique Dès Maintenant avec Français Pratique.</strong></p>
-        <a href="https://play.google.com/store/apps/details?id=com.votreapp" class="button">Téléchargez l'application</a>
-        <p>Version : 1.2.6 | Date de mise à jour : 16 déc. 2024</p>
-        <p>Nécessite Android 6.0 ou version ultérieure | Téléchargements : 1 000+</p>
-        <p>Classification du contenu : 3 ans et plus</p>
+  <section>
+    <h2>Témoignages</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“j'aime beaucoup cette application 🤳💻📱🫶😍😘!” – <strong>Vanessa</strong></p>
+      </div>
+      <div class="testimonial">
+        <p>“C'est une bonne application” – <strong>jeanalexande </strong></p>
+      </div>
+      <div class="testimonial">
+        <p>“Application très performante, fortement recommandée.” – <strong>Creolo</strong></p>
+      </div>
     </div>
+  </section>
+
+  <section>
+    <h2>Captures d’écran</h2>
+    <div class="screenshots">
+      <img src="1.jpg" alt="Capture d'écran 1">
+      <!--<img src="2.jpg" alt="Capture d'écran 2">-->
+      <img src="3.jpg" alt="Capture d'écran 3">
+      <img src="4.jpg">
+    </div>
+  </section>
+
+  <section>
+    <h2>Quelques chiffres</h2>
+    <div class="stats">
+      <div class="stat">
+        <h3>+2000</h3>
+        <p>Téléchargements</p>
+      </div>
+      <div class="stat">
+        <h3>5★</h3>
+        <p>Note moyenne</p>
+      </div>
+      <div class="stat">
+        <h3>+1000</h3>
+        <p>Questions disponibles</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Rejoignez l’aventure !</h2>
+    <p>Commencez votre voyage linguistique aujourd’hui et atteignez vos objectifs plus rapidement avec <strong>Français Pratique</strong>.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.fp.lesprosfr&hl=fr" class="button">📲 Télécharger sur Play Store</a>
+  </section>
+
+  <div class="footer">
+    <p>Français Pratique – Apprendre, c’est progresser.</p>
+    <p>Nécessite Android 6.0 ou version ultérieure · Classification : 3 ans et plus</p>
+  </div>
 </div>
 
 </body>
